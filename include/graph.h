@@ -23,14 +23,14 @@ class Graph {
     string *es();
     unsigned num_vs();
     unsigned num_es();
-	bool is_vertex(string n);
+    bool is_vertex(string n);
     bool is_edge(string n);
     
  private:
-	map<string, Vertex> _v_map;
+    map<string, Vertex> _v_map;
     map<string, Edge> _e_map;
     vector<string> _vs;
-	vector<string> _es;
+    vector<string> _es;
 
     unsigned _num_vs;
     unsigned _num_es;

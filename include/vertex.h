@@ -11,7 +11,7 @@ class Vertex {
     void add_edge(string e);
     string get_name();
  private:
- 	vector<string> _edges;
+    vector<string> _edges;
     string _name;
     
 };

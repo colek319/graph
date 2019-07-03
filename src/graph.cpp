@@ -6,7 +6,7 @@
 #include <../include/graph.h>
 
 Graph::Graph() {
-	_num_vs = 0;
+    _num_vs = 0;
     _num_es = 0;
 }
 
@@ -20,9 +20,9 @@ Graph::~Graph() {
 // a vertex. Further, when a vertex is added, it has no invident
 // edges.
 bool Graph::add_vertex(string v) {
-	if (not is_vertex(v)) {
-    	_v_map(v) = Vertex(v);
-		return true;
+    if (not is_vertex(v)) {
+        _v_map(v) = Vertex(v);
+        return true;
     }
 
     return false;
@@ -31,8 +31,8 @@ bool Graph::add_vertex(string v) {
 // only adds edge if u and v are vertices, and e is
 // not a used name
 bool Graph::add_edge(string e, string u, string v) {
-	if (not is_edge(e) and is_vertex(u) and is_vertex(v)) {
-		_v_map(e) = Edge(u, v, e);
+    if (not is_edge(e) and is_vertex(u) and is_vertex(v)) {
+        _v_map(e) = Edge(u, v, e);
         return true;
     }
     return false;
@@ -41,7 +41,7 @@ bool Graph::add_edge(string e, string u, string v) {
 // returns true if n is a name for a vertex or edge
 bool Graph::is_vertex(string n) {
     auto and_func = [](auto a, auto b){a && b};
-	return accumulate(_vs.begin(), _vs.end(), 1, and_func);
+    return accumulate(_vs.begin(), _vs.end(), 1, and_func);
 }
 
 template<>
@@ -49,7 +49,7 @@ template<>
 
 bool Graph::is_edge(string n) {
     auto and_func = [](auto a, auto b){a && b};
-	return accumulate(_es.begin(), _es.end(), 1, and_func);
+    return accumulate(_es.begin(), _es.end(), 1, and_func);
 }
 
 
@@ -58,33 +58,33 @@ bool Graph::is_edge(string n) {
 
 void Graph::print_vertices() {
     cout << "{";
-	for (string elem : _vs) {
-		cout << " " << elem << " ";
+    for (string elem : _vs) {
+        cout << " " << elem << " ";
     }
     cout << "}\n";
 }
 
 void Graph::print_edges() {
     cout << "{";
-	for (string elem : _es) {
-		cout << " " << elem << " ";
+    for (string elem : _es) {
+        cout << " " << elem << " ";
     }
     cout << "}\n";
 }
 
 string *Graph::vs() {
-	return _vs.data();
+    return _vs.data();
 }
 
 string *Graph::es() {
-	return _es.data();
+    return _es.data();
 }
 
 unsigned Graph::num_vs() {
-	return _num_vs;
+    return _num_vs;
 }
 
 unsigned Graph::num_es() {
-	return _num_es;
+    return _num_es;
 }
 
