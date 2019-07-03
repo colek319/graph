@@ -1,0 +1,11 @@
+
+
+
+
+The goal of this project is to build a personal graph abstraction
+with which I can in a mathematically faithful way build larger
+structures in c++. It will also serve to help me learn modern c++.
+
+This graph should support:
+	- interfacing as an adjacency list
+    - interfacing as an adjacency matrix

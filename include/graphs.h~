@@ -1,0 +1,22 @@
+#ifndef GRAPH_H
+#define GRAPH_H
+
+#include <map>
+
+class Graph {
+ public:
+    Graph();
+    ~Graph();
+
+    bool add_edge (string e);
+    bool add_vertex (string v);
+
+    void print_names();
+    
+ private:
+	map<string, Vertex> vs;
+    map<string, Edge> es;
+	vector<string> ns;    
+};
+
+#endif
